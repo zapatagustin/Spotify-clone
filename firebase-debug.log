@@ -1,0 +1,103 @@
+[debug] [2021-07-01T10:55:32.022Z] ----------------------------------------------------------------------
+[debug] [2021-07-01T10:55:32.023Z] Command:       /home/mono/.nvm/versions/node/v12.14.1/bin/node /home/mono/.nvm/versions/node/v12.14.1/bin/firebase init
+[debug] [2021-07-01T10:55:32.024Z] CLI Version:   9.14.0
+[debug] [2021-07-01T10:55:32.024Z] Platform:      linux
+[debug] [2021-07-01T10:55:32.024Z] Node Version:  v12.14.1
+[debug] [2021-07-01T10:55:32.024Z] Time:          Thu Jul 01 2021 10:55:32 GMT+0000 (GMT)
+[debug] [2021-07-01T10:55:32.024Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-07-01T10:55:32.028Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-01T10:55:32.028Z] > authorizing via signed-in user (zapatagustin4@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/mono/projects/sputofy/client
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-07-01T10:56:03.636Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-07-01T10:56:03.637Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-01T10:56:03.762Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 01 Jul 2021 17:56:05 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-01T10:56:03.789Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"sputofy","name":"y"}
+[debug] [2021-07-01T10:56:04.825Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Thu, 01 Jul 2021 17:56:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=938","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-01T10:56:04.825Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"field [display_name] has issue [project display name must be at least 4 characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"display_name","description":"project display name must be at least 4 characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2021-07-01T10:56:04.934Z] FirebaseError: HTTP Error: 400, field [display_name] has issue [project display name must be at least 4 characters]
+    at module.exports (/home/mono/.nvm/versions/node/v12.14.1/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/home/mono/.nvm/versions/node/v12.14.1/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/home/mono/.nvm/versions/node/v12.14.1/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:223:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at Request.<anonymous> (/home/mono/.nvm/versions/node/v12.14.1/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:223:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at IncomingMessage.<anonymous> (/home/mono/.nvm/versions/node/v12.14.1/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:312:28)
+    at IncomingMessage.emit (events.js:228:7)
+    at IncomingMessage.EventEmitter.emit (domain.js:475:20)
+    at endReadableNT (_stream_readable.js:1185:12)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2021-07-01T10:56:23.154Z] ----------------------------------------------------------------------
+[debug] [2021-07-01T10:56:23.156Z] Command:       /home/mono/.nvm/versions/node/v12.14.1/bin/node /home/mono/.nvm/versions/node/v12.14.1/bin/firebase init
+[debug] [2021-07-01T10:56:23.156Z] CLI Version:   9.14.0
+[debug] [2021-07-01T10:56:23.156Z] Platform:      linux
+[debug] [2021-07-01T10:56:23.156Z] Node Version:  v12.14.1
+[debug] [2021-07-01T10:56:23.156Z] Time:          Thu Jul 01 2021 10:56:23 GMT+0000 (GMT)
+[debug] [2021-07-01T10:56:23.156Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-07-01T10:56:23.160Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-01T10:56:23.160Z] > authorizing via signed-in user (zapatagustin4@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/mono/projects/sputofy/client
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-07-01T10:57:02.804Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"sputofy","name":"tuma"}
+[debug] [2021-07-01T10:57:04.038Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 01 Jul 2021 17:57:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1148","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-01T10:57:04.040Z] > refreshing access token with scopes: []
+[debug] [2021-07-01T10:57:04.040Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-01T10:57:04.174Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 01 Jul 2021 17:57:06 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-01T10:57:04.202Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9183394407757419793 [none]
+[debug] [2021-07-01T10:57:05.473Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9183394407757419793 200
+[debug] [2021-07-01T10:57:05.473Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9183394407757419793 {"name":"operations/cp.9183394407757419793","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":9,"message":"Callers must accept Terms of Service","details":[{"@type":"type.googleapis.com/google.rpc.PreconditionFailure","violations":[{"type":"TOS","subject":"cloud","description":"Callers must accept Terms of Service"}]}]}}
+[debug] [2021-07-01T10:57:05.571Z] FirebaseError: Callers must accept Terms of Service
+    at OperationPoller.poll (/home/mono/.nvm/versions/node/v12.14.1/lib/node_modules/firebase-tools/lib/operation-poller.js:23:19)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+    at async createCloudProject (/home/mono/.nvm/versions/node/v12.14.1/lib/node_modules/firebase-tools/lib/management/projects.js:181:29)
+    at async Object.createFirebaseProjectAndLog (/home/mono/.nvm/versions/node/v12.14.1/lib/node_modules/firebase-tools/lib/management/projects.js:46:9)
+    at async promptAndCreateNewProject (/home/mono/.nvm/versions/node/v12.14.1/lib/node_modules/firebase-tools/lib/init/features/project.js:32:12)
+    at async Object.doSetup [as project] (/home/mono/.nvm/versions/node/v12.14.1/lib/node_modules/firebase-tools/lib/init/features/project.js:87:27)
+    at async init (/home/mono/.nvm/versions/node/v12.14.1/lib/node_modules/firebase-tools/lib/init/index.js:19:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
